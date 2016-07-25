@@ -19,7 +19,6 @@ public class Util {
         StringBuilder json = new StringBuilder();
         try {
             URL URL = new URL(url);
-            //URLConnection yc = URL.openConnection();
             HttpURLConnection httpURLConnection = (HttpURLConnection)URL.openConnection();
             httpURLConnection.setRequestMethod("GET");
             httpURLConnection.setDoOutput(true);
@@ -49,10 +48,10 @@ public class Util {
 	public static Map getMapFromJsonObjStr(String jsonObjStr) {   
        JSONObject jsonObject = JSONObject.fromObject(jsonObjStr);   
   
-       Map map = new HashMap();   
+       Map map = new HashMap<>();   
         for (Iterator iter = jsonObject.keys(); iter.hasNext();) {   
-            String key = (String) iter.next();   
-            map.put(key, jsonObject.get(key));   
+            String key =  (String) iter.next();   
+            map.put(key,  jsonObject.get(key));   
         }   
         return map;   
     }    
