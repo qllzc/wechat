@@ -43,7 +43,7 @@ public class Util {
 		String URL =String.format("https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code", appid,appsecret,code);
 		return getMapFromJsonObjStr(loadJSON(URL));
 		
-	}
+	} 
 	
 	public static Map getMapFromJsonObjStr(String jsonObjStr) {   
        JSONObject jsonObject = JSONObject.fromObject(jsonObjStr);   
